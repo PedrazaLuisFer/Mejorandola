@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos</title>
+<script type="text/javascript">
+
+//Variable global
+var nombre = "Frisco";
+//Clase: Objeto maestro, del que se derivan otros objetos
+//Clase: Definicion del objeto
+var Mascota = function (n,v) {
+	this.nombre = n;
+	this.voz = v;
+}
+Mascota.prototype.hablar = function()
+{
+alert(this.nombre + " dice: " + this.voz); //concatenacion de strings
+}
+
+//perro = objeto de la clase Mascota
+var perro = new Mascota("roco", "guau!");
+var gato = new Mascota("nian","miaw");
+perro.hablar();  //funcion
+gato.hablar();
+
+
+// var perro = {
+// 	agilidad: 50,
+// 	fuerza: 100,
+// 	limpieza: false,
+// 	longevidad: 14,
+// 	amor: true,
+// 	//funcion declarada dentro de un objeto
+// 	voz: function (){
+// 		alert("guau!");
+// 	}
+
+// };
+
+</script>
+
+</head>
+<body>
+	<h1>Perros y Gatos</h1>
+
+</body>
+</html> 

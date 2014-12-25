@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ciclos</title>
+	<script type="text/javascript">
+
+//VARIABLES GLOBALES
+var c, t, b;
+
+
+function inicio()
+{
+	c = document.getElementById("caja");
+	t = document.getElementById("alejandra");
+	b = document.getElementById("botoncito");
+
+	b.addEventListener("click", calcular); 
+	// añade un evento cuando el evento se dispare
+
+	
+//3er Ejemplo numeros pares	
+	// var numeros = 1;
+	// var residuo; 
+	// while(numeros <=50 )
+	// {
+	// 	residuo = numeros %2;
+	// 	if( residuo == 0)
+	// 	{
+	// 		c.innerHTML += " " + numeros;
+	// 	}
+	// 	numeros++;
+	// }
+
+
+//Ejemplo 2
+	// var numero = 1;
+	// var residuo;
+	// residuo= numero % 2; //% es un residuo
+	// c.innerHTML = residuo;
+
+//1ER EJEMPLO.
+	// WHILE: signicfica "mientras"
+	//var gritos = 10;
+	// while(gritos >0)
+	// {
+	// 	c.innerHTML += "a";
+	// 	gritos--;
+	// 	 //gritos = gritos - 1;  // resta -1
+	// }
+	// c.innerHTML += "h!";
+
+	//CADA VEZ QUE UN CICLO OCURRE A ESTO SE LE LLAMA:
+	//"ITERACIÓN"
+
+	//c.innerHTML +=  "<strong>  Adios</strong> </br> <em>papá! </em>";
+	// +=    es sumar contenido. en este caso de la variable C
+}
+
+
+function calcular()
+{
+	//Number forza a convertirlo en numero
+	var numero = Number(t.value); 
+	var calculo = 1;
+	var n = 1;
+	// while(n <= numero)
+	// {
+	// 	calculo = calculo * n;
+	// 	n++;
+	// }
+
+	//CON CICLO FOR
+	//Para n=1; Mientras n<=numero; n++
+	for (n=1; n<= numero; n++)
+	{
+		calculo = calculo * n;
+	}
+
+	c.innerHTML = "<strong>" + calculo + "</strong>";
+	//alert(calculo);
+
+}
+
+	</script>
+
+</head>
+<body>
+		<input type="text" id="alejandra" />
+		<input type="button" id="botoncito" value="Tocame"/>
+		<div id="caja">No hay nada</div>
+		<div>Otra caja</div>
+		<script type="text/javascript">
+		inicio ();
+
+		</script>
+</body>
+</html>
